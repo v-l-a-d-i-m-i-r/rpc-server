@@ -1,0 +1,15 @@
+FROM node:12.13.1-alpine
+
+WORKDIR /www
+
+COPY package.json ./package.json
+COPY package-lock.json ./package-lock.json
+
+RUN npm ci
+
+COPY . .
+
+ENTRYPOINT ["npm", "start"]
+
+EXPOSE 80
+EXPOSE 5858

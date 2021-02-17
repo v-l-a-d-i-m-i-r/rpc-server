@@ -1,0 +1,21 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // https://alexanderzeitler.com/articles/debugging-a-nodejs-es6-application-in-a-docker-container-using-visual-studio-code/
+      // https://kevinridgway.com/debugging-nodejs-in-docker-with-visualstudiocode/
+      "request": "attach",
+      "name": "docker-attach",
+      "type": "node",
+      "address": "localhost",
+      "port": 5858,
+      "restart": true,
+      "protocol": "inspector",
+      "remoteRoot": "/www/",
+      "localRoot": "${workspaceRoot}/"
+    }
+  ]
+}
